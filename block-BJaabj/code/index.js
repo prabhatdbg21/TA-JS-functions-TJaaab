@@ -73,7 +73,13 @@ function getTable (){
 
 function isLeapYear (){
   let year = +prompt ("Enter a year");
-  if (year % 4 == 0){
+  if (year % 400 === 0){
+    alert ("leap year");
+  }
+  else if (year % 100 === 0){
+    alert ("not a leap year");
+  }
+  else if (year % 4 === 0){
     alert ("leap year");
   }
   else {
@@ -91,5 +97,9 @@ function isLeapYear (){
 
 function getFactorial (){
   let number = +prompt("Enter a number");
-  alert (`The fraction of ${number} is fraction`)
+  let factorial = 1;
+  for (i= number; i > 0; --i){
+    factorial = factorial * i ;
+  }
+  alert (`The factorial of ${number} if ${factorial}`)
 }
