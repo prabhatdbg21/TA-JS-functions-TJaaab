@@ -30,12 +30,11 @@ addTwoNumbers(10, "100"); // Alert Enter Valid Input
 */
 
 function addTwoNumbers(firstNum, secondNum){
-  let sum = firstNum + secondNum ;
-  if (sum == !NaN){
-    alert (`${sum}`)
+  if ( typeof firstNum !== "number" || typeof secondNum !== "number"){
+    alert ("Enter Valid Input")
   }
   else{
-    alert ("Enter Valid Input")
+    return firstNum + secondNum ;
   }
 }
 
@@ -91,6 +90,14 @@ else {
 }
 return leapYear ;
 }
+
+function isLeapYear (year) {
+  if (year % 400 === 0) return true;
+  if (year % 100 === 0) return false;
+  if (year % 4 === 0) return true;
+  else return false ;
+}
+
 
 /*
 6. Create a function named `getFactorial` that accepts a number and return the factorial of the number.
