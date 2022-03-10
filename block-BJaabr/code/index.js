@@ -65,7 +65,7 @@ addOne (21);
 let returnValue = addOne (23);
 
 // - What is the typeof returnValue
-//typeof returnValue is number
+//typeof returnValue is "number"
 
 /* 2. Subtract one
 
@@ -98,7 +98,7 @@ substractOne (21);
 let returnValue = substractOne(21);
 
 // - What is the typeof returnValue
-//typeof returnValue is number
+//typeof returnValue is "number"
 
 /* 3. Add two numbers
 
@@ -133,7 +133,7 @@ sum (21);
 let returnValue = sum (21);
 
 // - What is the typeof returnValue
-//typeof returnValue is number
+//typeof returnValue is "number"
 
 /* 4. Square of the given value
 
@@ -167,7 +167,7 @@ square(21);
 let returnValue = square(21);
 
 // - What is the typeof returnValue
-//typeof returnValue is number
+//typeof returnValue is "number"
 
 /* 5. Find isGreater
 
@@ -230,7 +230,7 @@ Do the following with above problem.
 
 // - Write a Function Declaration
 function oddOrEven (number){
-  if (number % 2 == 0){
+  if (number % 2 === 0){
     return `Number is even` ;
   }
   else {
@@ -240,7 +240,7 @@ function oddOrEven (number){
 
 // - Write an anonymous Function Expression
 let oddOrEven = function (number){
-  if (number % 2 == 0){
+  if (number % 2 === 0){
     return `Number is even` ;
   }
   else {
@@ -249,6 +249,14 @@ let oddOrEven = function (number){
 }
 
 // - Write an named Function Expression
+let oddOrEven = function isOdd(number){
+  if (number % 2 === 0){
+    return `Number is even` ;
+  }
+  else {
+    return `Number is odd` ;
+  }
+}
 
 // - Write an Arrow Function without curly brackets (hint: use ternary operator)
 let oddOrEven = (number) => number % 2 == 0 ?  `Number is even` :  `Number is odd` ;
@@ -265,4 +273,4 @@ oddOrEven (21);
 let returnValue = oddOrEven (21);
 
 // - What is the typeof returnValue
-//typeof returnValue is string
+//typeof returnValue is "string"
