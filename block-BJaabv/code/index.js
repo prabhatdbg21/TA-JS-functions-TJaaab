@@ -8,9 +8,9 @@
   * [ ] Add an additional argument to the function that takes the conversion rate of human to dog years.
 */
 
-function calculateDogAge(puppyAge = 0 ) {
+function calculateDogAge(puppyAge , conversion = 7) {
   // Your code goes here
-  return humanAge * 7 ;
+  return puppyAge * conversion ;
 }
 
 /*
@@ -22,7 +22,9 @@ function calculateDogAge(puppyAge = 0 ) {
 
 function calculateMoviesToWatch(age = 0 , noOfMovies = 0) {
   // Your code goes here
-  return age * (noOfMovies * 4 * 12)
+  const maxAge = 80 ;
+  moviLeft = (maxAge - age )* (noOfMovies * 4 * 12);
+  return moviLeft ;
 }
 
 /*
@@ -33,9 +35,9 @@ function calculateMoviesToWatch(age = 0 , noOfMovies = 0) {
 
 function celsiusToFahrenheit(celsiusTemperature) {
   // Your code goes here
-  return (celsiusTemperature * 9 / 5) + 32 ;
+  let fahrenheit = (celsiusTemperature * 9 / 5) + 32 ;
+  return ` ${celsiusTemperature} °C is ${fahrenheit} °F`
 }
-
 /*
 4. 🎖Create a function called fahrenheitToCelsius:
   * [ ] Accepts fahrenheit temperature as argument.
@@ -44,7 +46,8 @@ function celsiusToFahrenheit(celsiusTemperature) {
 
 function celsiusToFahrenheit(fahrenheitTemperature) {
   // Your code goes here
-  return (fahrenheitTemperature - 32) * 5/9 ;
+  let celsius = (fahrenheitTemperature - 32) * 5/9 ;
+  return ` ${fahrenheitTemperature} °F is ${celsius} °C `
 }
 
 /*
@@ -58,8 +61,7 @@ function celsiusToFahrenheit(fahrenheitTemperature) {
 function pow(n , x = 1) {
   // Your code goes here
   if (n < 0) return "The number below 1 is not allowed";
-  if (n = 1) return 1 ;
-  else return n * x;
+  else return n ** x;
 }
 
 // Test
@@ -75,8 +77,20 @@ and return sum or product of 1,…,n. If user enters any other value than `sum` 
 
 function sumOrProductOfN(a = 0  , sm) {
   // Your code goes here
-  if (sm == "sum") return a + 6 ;
-  if (sm == "product") return a * 6 ;
+  if (sm === "sum"){
+    let sum = 0; 
+    for (i = 1 ; i <= a ; i++){
+      sum = sum + i ;
+    }
+    return sum ;
+  } ;
+  if (sm === "product"){
+    let product = 1; 
+    for (i = 1 ; i <= a ; i++){
+      product = product * i ;
+    }
+    return product ;
+  }
   else return `Not a valid Input`;
 }
 
@@ -101,18 +115,12 @@ function sumOfN(n) {
 7. 🎖Modify the previous program such that only multiples of 5 or 7 are considered in the sum, e.g. n = 20 (5,7,10,14,15,20) 71
 */
 
-function sumOfN(n) {
+function sumOfW(n) {
   // Your code goes here
   sum = 0 ;
   for (i = 1 ; i <= n ; i++){
-    if (n % 5 == 0){
-      sum = sum + 5
-    }
-    if (n % 7 == 0){
-      sum = sum + 7
-    }
-    else {
-      
+    if (i % 5 === 0 || i % 7 === 0 ){
+    sum = sum + i;
     }
   }
   return sum ;
